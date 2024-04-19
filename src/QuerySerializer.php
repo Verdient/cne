@@ -3,6 +3,8 @@
 
 declare(strict_types=1);
 
+namespace Verdient\Cne;
+
 use Verdient\http\serializer\query\RFC1738Serializer;
 use Verdient\http\serializer\SerializerInterface;
 
