@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Verdient\Cne;
 
+use QuerySerializer;
 use Verdient\HttpAPI\AbstractClient;
 
 /**
@@ -56,6 +57,7 @@ class Cne extends AbstractClient
         if ($this->proxyHost) {
             $request->setProxy($this->proxyHost, empty($this->proxyPort) ? null : intval($this->proxyPort));
         }
+        $request->setQuerySerializer(QuerySerializer::class);
         return $request;
     }
 
